@@ -24,21 +24,21 @@ const productSchema = new mongoose.Schema({
     type: String,
     required: [true, "Name is required"],
   },
-  urban_storage_stock: Number,
-  urban_counter_stock: Number,
-  urban_counter_stock_min: Number,
-  urban_counter_stock_rec: Number,
-  urban_stock_min: Number,
-  urban_stock_rec: Number,
-  harbor_storage_stock: Number,
-  harbor_counter_stock: Number,
-  harbor_counter_stock_min: Number,
-  harbor_counter_stock_rec: Number,
-  harbor_stock_min: Number,
-  harbor_stock_rec: Number,
-  montejo_stock: Number,
-  montejo_stock_min: Number,
-  montejo_stock_rec: Number,
+  urban_storage_stock: { type: Number, default: 0 },
+  urban_counter_stock: { type: Number, default: 0 },
+  urban_counter_stock_min: { type: Number, default: 0 },
+  urban_counter_stock_rec: { type: Number, default: 0 },
+  urban_stock_min: { type: Number, default: 0 },
+  urban_stock_rec: { type: Number, default: 0 },
+  harbor_storage_stock: { type: Number, default: 0 },
+  harbor_counter_stock: { type: Number, default: 0 },
+  harbor_counter_stock_min: { type: Number, default: 0 },
+  harbor_counter_stock_rec: { type: Number, default: 0 },
+  harbor_stock_min: { type: Number, default: 0 },
+  harbor_stock_rec: { type: Number, default: 0 },
+  montejo_stock: { type: Number, default: 0 },
+  montejo_stock_min: { type: Number, default: 0 },
+  montejo_stock_rec: { type: Number, default: 0 },
 });
 
 // Model
@@ -104,8 +104,45 @@ app.get("/", (req, res) =>
 
 app.post("/", (req, res) => {
   console.log(req.body);
-  let product_name = req.body.product_name;
-  console.log(product_name);
+  const product_name = req.body.product_name;
+  const urban_storage_stock = Number(req.body.urban_storage_stock);
+  const urban_counter_stock = Number(req.body.urban_counter_stock);
+  const urban_counter_stock_min = Number(req.body.urban_counter_stock_min);
+  const urban_counter_stock_rec = Number(req.body.urban_counter_stock_rec);
+  const urban_stock_min = Number(req.body.urban_stock_min);
+  const urban_stock_rec = Number(req.body.urban_stock_rec);
+
+  const harbor_storage_stock = Number(req.body.harbor_storage_stock);
+  const harbor_counter_stock = Number(req.body.harbor_counter_stock);
+  const harbor_counter_stock_min = Number(req.body.harbor_counter_stock_min);
+  const harbor_counter_stock_rec = Number(req.body.harbor_counter_stock_rec);
+  const harbor_stock_min = Number(req.body.harbor_stock_min);
+  const harbor_stock_rec = Number(req.body.harbor_stock_rec);
+
+  const montejo_stock = Number(req.body.montejo_stock);
+  const montejo_stock_min = Number(req.body.montejo_stock_min);
+  const montejo_stock_rec = Number(req.body.montejo_stock_rec);
+
+  const product = new Product({
+    product_name: product_name,
+    urban_storage_stock: urban_storage_stock,
+    urban_counter_stock: urban_counter_stock,
+    urban_counter_stock_min: urban_counter_stock_min,
+    urban_counter_stock_rec: urban_counter_stock_rec,
+    urban_stock_min: urban_stock_min,
+    urban_stock_rec: urban_stock_rec,
+    harbor_storage_stock: harbor_storage_stock,
+    harbor_counter_stock: harbor_counter_stock,
+    harbor_counter_stock_min: harbor_counter_stock_min,
+    harbor_counter_stock_rec: harbor_counter_stock_rec,
+    harbor_stock_min: harbor_stock_min,
+    harbor_stock_rec: harbor_stock_rec,
+    montejo_stock: montejo_stock,
+    montejo_stock_min: montejo_stock_min,
+    montejo_stock_rec: montejo_stock_rec,
+  });
+  product.save();
+
   res.render("test", {
     foo: "FOO",
   });
