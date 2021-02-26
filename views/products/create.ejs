@@ -1,0 +1,290 @@
+<body>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                Manage
+                <small>Products</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">Products</li>
+            </ol>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+            <!-- Small boxes (Stat box) -->
+            <div class="row">
+                <div class="col-md-12 col-xs-12">
+
+                    <div id="messages"></div>
+
+
+                    <div class="alert alert-success alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+
+                    </div>
+
+
+
+                    <div class="box">
+                        <div class="box-header">
+                            <h3 class="box-title">Add Product</h3>
+                        </div>
+                        <!-- /.box-header -->
+                        <form role="form" action="" method="post">
+                            <div class="box-body">
+
+                                <div class="form-group">
+
+                                    <label for="product_image">Imagen</label>
+                                    <div class="kv-avatar">
+                                        <div class="file-loading">
+                                            <input id="product_image" name="product_image" type="file">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="product_name">Nombre del producto*</label>
+                                    <input type="text" class="form-control" id="product_name" name="product_name"
+                                        placeholder="Enter product name" autocomplete="off" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="product_category">Categoría del producto</label>
+                                    <input type="text" class="form-control" id="product_category"
+                                        name="product_category" placeholder="Categoría del producto"
+                                        autocomplete="off" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="product_subcategory">Subcategoría del producto</label>
+                                    <input type="text" class="form-control" id="product_subcategory"
+                                        name="product_subcategory" placeholder="Subcategoría del producto"
+                                        autocomplete="off" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="sell_unit">Unidad de venta</label>
+                                    <input type="text" class="form-control" id="sell_unit" name="sell_unit"
+                                        placeholder="Unidad de venta" autocomplete="off" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="conversion_of_units">Factor de conversión</label>
+                                    <input type="number" class="form-control" id="conversion_of_units"
+                                        name="conversion_of_units" placeholder="Factor de conversión"
+                                        autocomplete="off" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="buy_price">Precio de compra</label>
+                                    <input type="number" class="form-control" id="buy_price" name="buy_price"
+                                        placeholder="Precio de compra" autocomplete="off" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="sell_price">Precio de venta</label>
+                                    <input type="number" class="form-control" id="sell_price" name="sell_price"
+                                        placeholder="Precio de compra" autocomplete="off" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="description">Descripción</label>
+                                    <textarea type="text" class="form-control" id="description" name="description"
+                                        placeholder="Enter description" autocomplete="off">
+                                    </textarea>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="urban_storage_stock">Stock en el almacén de Urban*</label>
+                                    <input type="number" class="form-control" id="urban_storage_stock"
+                                        name="urban_storage_stock" placeholder="Stock en el almacén de Urban"
+                                        autocomplete="off" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="urban_counter_stock">Stock en el mostrador de Urban*</label>
+                                    <input type="number" class="form-control" id="urban_counter_stock"
+                                        name="urban_counter_stock" placeholder="Stock en el mostrador de Urban"
+                                        autocomplete="off" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="urban_counter_stock_min">Stock mínimo en el mostrador de Urban*</label>
+                                    <input type="number" class="form-control" id="urban_counter_stock_min"
+                                        name="urban_counter_stock_min"
+                                        placeholder="Stock mínimo en el mostrador de Urban" autocomplete="off" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="urban_counter_stock_rec">Stock recomendado en el mostrador de
+                                        Urban*</label>
+                                    <input type="number" class="form-control" id="urban_counter_stock_rec"
+                                        name="urban_counter_stock_rec"
+                                        placeholder="Stock recomendado en el mostrador de Urban" autocomplete="off" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="urban_stock_min">Stock mínimo de Urban*</label>
+                                    <input type="number" class="form-control" id="urban_stock_min"
+                                        name="urban_stock_min" placeholder="Stock mínimo de Urban" autocomplete="off" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="urban_stock_rec">Stock recomendado de Urban*</label>
+                                    <input type="number" class="form-control" id="urban_stock_rec"
+                                        name="urban_stock_rec" placeholder="Stock recomendado de Urban"
+                                        autocomplete="off" />
+                                </div>
+
+
+
+
+
+                                <div class="form-group">
+                                    <label for="harbor_storage_stock">Stock en el almacén de Harbor*</label>
+                                    <input type="number" class="form-control" id="harbor_storage_stock"
+                                        name="harbor_storage_stock" placeholder="Stock en el almacén de Harbor"
+                                        autocomplete="off" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="harbor_counter_stock">Stock en el mostrador de Harbor*</label>
+                                    <input type="number" class="form-control" id="harbor_counter_stock"
+                                        name="harbor_counter_stock" placeholder="Stock en el mostrador de Harbor"
+                                        autocomplete="off" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="harbor_counter_stock_min">Stock mínimo en el mostrador de
+                                        Harbor*</label>
+                                    <input type="number" class="form-control" id="harbor_counter_stock_min"
+                                        name="harbor_counter_stock_min"
+                                        placeholder="Stock mínimo en el mostrador de Harbor" autocomplete="off" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="harbor_counter_stock_rec">Stock recomendado en el mostrador de
+                                        Harbor*</label>
+                                    <input type="number" class="form-control" id="harbor_counter_stock_rec"
+                                        name="harbor_counter_stock_rec"
+                                        placeholder="Stock recomendado en el mostrador de Harbor" autocomplete="off" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="harbor_stock_min">Stock mínimo de Harbor*</label>
+                                    <input type="number" class="form-control" id="harbor_stock_min"
+                                        name="harbor_stock_min" placeholder="Stock mínimo de Harbor"
+                                        autocomplete="off" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="harbor_stock_rec">Stock recomendado de Harbor*</label>
+                                    <input type="number" class="form-control" id="harbor_stock_rec"
+                                        name="harbor_stock_rec" placeholder="Stock recomendado de Harbor"
+                                        autocomplete="off" />
+                                </div>
+
+
+
+                                <div class="form-group">
+                                    <label for="montejo_stock">Stock en Montejo*</label>
+                                    <input type="number" class="form-control" id="montejo_stock" name="montejo_stock"
+                                        placeholder="Stock en Montejo" autocomplete="off" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="montejo_stock_min">Stock mínimo de Montejo*</label>
+                                    <input type="number" class="form-control" id="montejo_stock_min"
+                                        name="montejo_stock_min" placeholder="Stock mínimo de Montejo"
+                                        autocomplete="off" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="montejo_stock_rec">Stock recomendado de Montejo*</label>
+                                    <input type="number" class="form-control" id="montejo_stock_rec"
+                                        name="montejo_stock_rec" placeholder="Stock recomendado de Montejo"
+                                        autocomplete="off" />
+                                </div>
+
+
+                            </div>
+                            <!-- /.box-body -->
+
+                            <div class="box-footer">
+                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                                <a href="<?php echo base_url('products/') ?>" class="btn btn-warning">Back</a>
+                            </div>
+                        </form>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+                <!-- col-md-12 -->
+            </div>
+            <!-- /.row -->
+
+
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.0.5/js/adminlte.min.js"
+        integrity="sha512-++c7zGcm18AhH83pOIETVReg0dr1Yn8XTRw+0bWSIWAVCAwz1s2PwnSj4z/OOyKlwSXc4RLg3nnjR22q0dhEyA=="
+        crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".select_group").select2();
+            $("#description").wysihtml5();
+
+            $("#mainProductNav").addClass('active');
+            $("#addProductNav").addClass('active');
+
+            var btnCust = '<button type="button" class="btn btn-secondary" title="Add picture tags" ' +
+                'onclick="alert(\'Call your custom code here.\')">' +
+                '<i class="glyphicon glyphicon-tag"></i>' +
+                '</button>';
+            $("#product_image").fileinput({
+                overwriteInitial: true,
+                maxFileSize: 1500,
+                showClose: false,
+                showCaption: false,
+                browseLabel: '',
+                removeLabel: '',
+                browseIcon: '<i class="glyphicon glyphicon-folder-open"></i>',
+                removeIcon: '<i class="glyphicon glyphicon-remove"></i>',
+                removeTitle: 'Cancel or reset changes',
+                elErrorContainer: '#kv-avatar-errors-1',
+                msgErrorClass: 'alert alert-block alert-danger',
+                // defaultPreviewContent: '<img src="/uploads/default_avatar_male.jpg" alt="Your Avatar">',
+                layoutTemplates: { main2: '{preview} ' + btnCust + ' {remove} {browse}' },
+                allowedFileExtensions: ["jpg", "png", "gif"]
+            });
+
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

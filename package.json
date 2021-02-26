@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/JavierGarciaGomez/HVPInventory#readme",
   "dependencies": {
+    "admin-lte": "^3.1.0-rc",
     "body-parser": "^1.19.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1"
